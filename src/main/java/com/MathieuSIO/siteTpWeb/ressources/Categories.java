@@ -1,6 +1,14 @@
 package com.MathieuSIO.siteTpWeb.ressources;
 
-public class CategorieResource {
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import java.io.Serializable;
+
+public class Categories implements Serializable {
+    private static final long serialVersionUID = 853L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     int ID;
     String label;
 
@@ -20,7 +28,7 @@ public class CategorieResource {
         this.label = label;
     }
 
-    public CategorieResource(int ID, String label) {
+    public Categories(int ID, String label) {
         this.ID = ID;
         this.label = label;
     }

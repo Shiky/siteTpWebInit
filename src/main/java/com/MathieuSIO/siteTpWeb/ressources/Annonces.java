@@ -1,24 +1,25 @@
 package com.MathieuSIO.siteTpWeb.ressources;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class AnnoncesResource {
+public class Annonces implements Serializable {
     int ID ;
     String Nom;
-    String contenue;
+    String contenu;
     Date debut;
     Date fin;
     int uploader;
     int categorie;
 
-    public AnnoncesResource(int ID, String nom, String contenue, Date debut, Date fin, int uploader, int categorie) {
+    public Annonces(int ID, String nom, String contenu, Date debut, Date fin, int uploader, int categories) {
         this.ID = ID;
         Nom = nom;
-        this.contenue = contenue;
+        this.contenu = contenu;
         this.debut = debut;
         this.fin = fin;
         this.uploader = uploader;
-        this.categorie = categorie;
+        this.categorie = categories;
     }
 
     public int getID() {
@@ -37,12 +38,12 @@ public class AnnoncesResource {
         Nom = nom;
     }
 
-    public String getContenue() {
-        return contenue;
+    public String getContenu() {
+        return contenu;
     }
 
-    public void setContenue(String contenue) {
-        this.contenue = contenue;
+    public void setContenu(String contenue) {
+        this.contenu = contenue;
     }
 
     public Date getDebut() {
@@ -73,7 +74,7 @@ public class AnnoncesResource {
         return categorie;
     }
 
-    public void setCategorie(int categorie) {
-        this.categorie = categorie;
+    public void setCategorie(int categories) {
+        this.categorie = categories;
     }
 }

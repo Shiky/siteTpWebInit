@@ -8,14 +8,14 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-@Path("Users")
-public class UsersResource {
+@Path("Annonces")
+public class AnnouncesResource {
     @Autowired
-    private UsersRepository UsersRepository;
+    private AnnounceRepository AnnounceRepository;
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Users createUsers(Users A) {
-        return UsersRepository.save(A);
+    public Annonces createAnnounces(Annonces A) {
+        return AnnounceRepository.save(A);
     }
 }
